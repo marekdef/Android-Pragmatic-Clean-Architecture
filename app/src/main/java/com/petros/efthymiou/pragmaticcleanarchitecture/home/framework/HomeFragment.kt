@@ -37,6 +37,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.List
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.Warning
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -171,8 +177,7 @@ class HomeFragment : Fragment() {
     fun ArticleListItem(article: Article) {
         Card(
             shape = RoundedCornerShape(8.dp),
-            backgroundColor = MaterialTheme.colors.surface,
-            elevation = 4.dp,
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth()
